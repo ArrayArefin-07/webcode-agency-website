@@ -33,8 +33,22 @@ const Services = () => {
 
 
       {/* services container */}
-      <div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:w-4/5 mx-auto mb-16">
+          {
+            services.map((service, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-6 hover:shadow-xl hover:rounded-md transition cursor-pointer">
+                <service.icon className="text-blue-600 text-4xl mb-4"/>
+                <p className="text-gray-600 mt-2 md:px-10">{service.description}</p>
+              </div>
+            ))
+          }
+      </div>
 
+      {/* Button */}
+      <div className="text-center">
+        <button className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition">
+          Explore More
+        </button>
       </div>
     </div>
 
