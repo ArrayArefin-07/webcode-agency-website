@@ -6,11 +6,11 @@ const HeadingSection = ({subheading, heading, description}) => {
       <p className="text-blue-600 font-semibold uppercase">
         {subheading}
       </p>
-      <h2 className="text-gray-800 text-3xl lg:text-4xl font-bold mt-3">
+      <h2 className="text-gray-800 text-3xl lg:text-4xl font-bold mt-3 sm:w-3/5 leading-normal capitalize lg:leading-snug mx-auto">
         {heading}
       </h2>
       {
-        description && <p className="text-gray-600 mt-4">{description}</p>
+        description && <p className="text-gray-600 mt-4 sm:w-3/5 text-base mx-auto">{description}</p>
       }
     </div>
   );
